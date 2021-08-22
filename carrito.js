@@ -2,25 +2,32 @@ let generalStock = [{name:"pants",price:12.3,pieces:3},{name:"shirt",price:10.7,
 
 class cart{
 
-    constructor(cupon){
+    constructor(productName,description,promoCode){
+        this.description = description;
+        this.productName = productName; 
         this.articles = [];
-        this.cupon = cupon || false;
+        this.promoCode = promoCode || false;
         this.total = 0;
+        this.promoCuponTotal = 0;
+        this.numItems = 0;
         
 
     }
 
     //este metodo imprime en consola el estado del carrito.
-    status(mensaje){
+    nform(mensaje){
         console.log(mensaje);
     }
 
     // este metodo añade un articulo al carrito
-    add(article){
+    //generalStock es un array que contiene todos los articulos disponibles
+
+    addArticle(nameArticle){
         for(const element of generalStock){
-            if(article == element.name && element.pieces > 0){
+            if(nameArticle == element.name && element.pieces > 0){   
                 this.articles.push(element);
-                this.status("articulo añadido con exito");
+                element.pieces = element.pieces - 1;                                                      
+                this.inform("articulo añadido con exito");
                 break;
             }
         }
@@ -52,10 +59,10 @@ class cart{
     }
 
     //este metodo hace un decuento sobre el total de la compra si se tiene un cupon
-    cuponTotal(){
-        if( this.cupon == true){
-            this.total = this.total - this.total*(.15);
-            this.status(`El total con cupon es : ${this.total}.`);
+    promoCodeTotal(){
+        if( this.promoCode == true){
+            this.promoCuponTotal = this.promoCuponTotal - this.promoCuponTotal*(.10);
+            this.status(`El total de la compra con cupn de descuento es :: ${this.CuponTotal}.`);
         }
         else{
             this.status('No tiene cupon de descuento.')
@@ -66,10 +73,6 @@ class cart{
 
 }
 
-let carrito = new cart();
-carrito.add("shirt");
-carrito.totalCompra();
-carrito.cuponTotal();
 
 
 
