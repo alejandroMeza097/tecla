@@ -38,10 +38,10 @@ class cart{
     //este metodo quita un articulo del carrito en caso de que este exista.
     remove(article){
         if(this.articles.length > 0){
-            this.status("no avilitado");
+            this.inform("no avilitado");
         }
         else{
-            this.status("no hay articulos en el carrito")
+            this.inform("no hay articulos en el carrito")
         }
 
 
@@ -53,7 +53,7 @@ class cart{
             this.total = this.total + element.price;
             
         }
-        this.status(`El total es :${this.total}`);
+        this.inform(`El total es :${this.total}`);
         
 
     }
@@ -62,11 +62,17 @@ class cart{
     promoCodeTotal(){
         if( this.promoCode == true){
             this.promoCuponTotal = this.promoCuponTotal - this.promoCuponTotal*(.10);
-            this.status(`El total de la compra con cupn de descuento es :: ${this.CuponTotal}.`);
+            this.inform(`El total de la compra con cupn de descuento es :: ${this.CuponTotal}.`);
         }
         else{
-            this.status('No tiene cupon de descuento.')
+            this.inform('No tiene cupon de descuento.')
         }
+    }
+
+    // este metodo cuenta el numero de articulos se compraran
+    numArticles(){
+        this.numItems = this.articles.length;
+        inform(`Numero de articulos en el carrito : ${this.numItems}`);
     }
     
 
