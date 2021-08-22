@@ -15,7 +15,7 @@ class cart{
     }
 
     //este metodo imprime en consola el estado del carrito.
-    nform(mensaje){
+    inform(mensaje){
         console.log(mensaje);
     }
 
@@ -36,9 +36,9 @@ class cart{
     }
 
     //este metodo quita un articulo del carrito en caso de que este exista.
-    remove(article){
+    remove(nameArticle){
         if(this.articles.length > 0){
-            this.inform("no avilitado");
+            this.inform("hecho");
         }
         else{
             this.inform("no hay articulos en el carrito")
@@ -62,7 +62,7 @@ class cart{
     promoCodeTotal(){
         if( this.promoCode == true){
             this.promoCuponTotal = this.promoCuponTotal - this.promoCuponTotal*(.10);
-            this.inform(`El total de la compra con cupn de descuento es :: ${this.CuponTotal}.`);
+            this.inform(`El total de la compra con cupon de descuento es :: ${this.CuponTotal}.`);
         }
         else{
             this.inform('No tiene cupon de descuento.')
@@ -72,12 +72,19 @@ class cart{
     // este metodo cuenta el numero de articulos se compraran
     numArticles(){
         this.numItems = this.articles.length;
-        inform(`Numero de articulos en el carrito : ${this.numItems}`);
+        this.inform(`Numero de articulos en el carrito : ${this.numItems}`);
     }
     
 
 
 }
+
+let mercadito = new cart();
+mercadito.addArticle("pants");
+mercadito.addArticle("pants");
+mercadito.totalCompra();
+mercadito.promoCodeTotal();
+mercadito.numArticles();
 
 
 
