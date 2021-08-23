@@ -37,7 +37,7 @@ class cart{
 
     //este metodo quita un articulo del carrito en caso de que este exista.
     remove(nameArticle){
-        var numOfIndex;
+        let  numOfIndex;
         if(this.articles.length > 0){
             for(const element of this.articles){
                 if(nameArticle == element.name){
