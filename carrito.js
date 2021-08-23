@@ -37,11 +37,19 @@ class cart{
 
     //este metodo quita un articulo del carrito en caso de que este exista.
     remove(nameArticle){
+        var numOfIndex;
         if(this.articles.length > 0){
-            this.inform("hecho");
+            for(const element of this.articles){
+                if(nameArticle == element.name){
+                    numOfIndex = this.articles.indexOf(element);
+                    break;
+                }
+            }
+            this.articles = this.articles.splice(numOfIndex,1);
+            this.inform("El articulo ha sido eliminado.")
         }
         else{
-            this.inform("no hay articulos en el carrito")
+            this.inform("no hay articulos en el carrito.")
         }
 
 
@@ -55,7 +63,6 @@ class cart{
         }
         this.inform(`El total es :${this.total}`);
         
-
     }
 
     //este metodo hace un decuento sobre el total de la compra si se tiene un cupon
@@ -75,7 +82,6 @@ class cart{
         this.inform(`Numero de articulos en el carrito : ${this.numItems}`);
     }
     
-
 
 }
 
