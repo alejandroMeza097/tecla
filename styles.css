@@ -1,0 +1,112 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+
+.navbar-brand{
+    font-size: 2rem;
+    color: black;
+    font-family: 'Dancing Script', cursive;
+    
+}
+
+.navbar-brand:hover{
+    color: lightslategrey;
+   
+}
+
+.nav-link{
+    margin-left: 10px;
+    margin-left: 10px;
+    color: black;
+    text-transform: uppercase;
+    
+}
+
+.nav-link:hover{
+    color: lightslategrey;
+}
+
+.search{
+    height: 40px;
+    width:80%;
+    border-radius: 60px;
+    outline: none;
+    border: 2px solid red;
+    margin-right: -35px;
+    
+}
+
+.btn0{
+    height: 40px;
+    width: 40%;
+    outline: none;
+    border:none;
+    background: red;
+    color: white;
+    font-weight: 700;
+    border-radius: 60px;
+
+}
+
+
+.main{
+    background-image: url(./pics/colored-plastic-building-block_42612-5.jpg);
+    background-size: cover;
+    height: 100vh;
+    background-position: 50% 50%;
+    width: 100%;
+    opacity: 0.8;
+    background-repeat: no-repeat;
+    
+}
+
+.main h2{
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: 'robot';
+    color: black;
+}
+
+.btn1{
+    height: 45px;
+    width: 35%;
+    border:none;
+    outline: none;
+    background-color:whitesmoke;
+    font-weight: 700;
+    border-radius: 60px;
+}
+
+
+.cart{
+    margin: 1.2rem;
+}
+
+
+.table{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    margin: 0.5rem;
+}
+
+
+.tendencias{
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: 'robot';
+    color: black;
+}
+
