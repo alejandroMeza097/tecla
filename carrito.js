@@ -58,6 +58,7 @@ class cart{
     //este metodo suma todo lo que se tiene en el carrito
     totalCompra(){
         for(const element of this.articles){
+            this.total = 0;
             this.total = this.total + element.price;
             
         }
@@ -91,7 +92,9 @@ mercadito.addArticle("pants");
 mercadito.totalCompra();
 mercadito.promoCodeTotal();
 mercadito.numArticles();
-
+mercadito.remove("pants");
+mercadito.numArticles();
+mercadito.totalCompra();
 
 
 
