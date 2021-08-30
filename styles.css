@@ -110,3 +110,27 @@
     color: black;
 }
 
+footer{
+    margin-top: 3rem;
+}
+
+
+.añadir-carrito{
+    padding: .2rem;
+    border-radius: 3px;
+    background-color: lightsteelblue
+}
+
+
+
+section{
+    padding-top: 10rem;
+}
+
+.facebook{
+    margin: .2rem;
+}
+
+.twitter{
+    margin: .2rem;
+}
